@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>স্বপন সাথী ট্রাস্ট · Swapan Sathi Trust</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mati:#2E1B10; --mati-2:#44291a; --haldi:#E3A21A; --alta:#B3261E; --nil:#23325A; --pata:#3E5A2B;
+  --paper:#EBDDB6; --paper-2:#E0CFA2; --ink:#2E1B10; --ink-soft:#5a4430; --line:#8a6a3d;
+  --serif:"Tiro Bangla","Noto Serif Bengali",Georgia,serif; --sans:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#24160d;--paper-2:#2e1c11;--ink:#EBDDB6;--ink-soft:#cdb88a;--line:#a98550}}
+:root[data-theme="dark"]{--paper:#24160d;--paper-2:#2e1c11;--ink:#EBDDB6;--ink-soft:#cdb88a;--line:#a98550}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.08rem/1.8 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.25;margin:0}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--haldi);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* top bar */
+nav{position:absolute;inset:0 0 auto 0;z-index:3;padding:calc(1rem + env(safe-area-inset-top,0px)) 0 1rem}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+nav b{font:400 1.25rem var(--serif);color:var(--haldi)}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-size:.98rem}
+nav a{text-decoration:none;color:#EBDDB6;border-bottom:1px dashed transparent}
+nav a:hover{border-color:var(--haldi)}
+
+/* hero: mud wall, alpona, diya */
+.hero{background:var(--mati);color:#EBDDB6;text-align:center;position:relative;overflow:hidden;padding:7.5rem 0 5rem}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 50% 38%,rgba(227,162,26,.22),transparent 55%),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px)}
+.hero .wrap{position:relative}
+.alpona{width:min(300px,70vw);height:auto;display:block;margin:0 auto 1.2rem}
+.flame{transform-origin:50% 100%;animation:flick 2.6s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(-1deg)}30%{transform:scale(.94,1.08) rotate(1.5deg)}60%{transform:scale(1.04,.96) rotate(-1deg)}}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);color:var(--haldi)}
+.hero .en{font:400 1.3rem var(--serif);letter-spacing:.06em;margin:.4rem 0 1.6rem;color:#d9c79b}
+.hero .tag{font:italic 400 clamp(1.3rem,3.6vw,1.9rem) var(--serif);margin:0 auto 1rem;max-width:30ch}
+.hero .bn-tag{color:#d9c79b;margin:0 auto 2rem}
+.btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.7rem;border:2px solid var(--haldi);background:var(--haldi);color:var(--mati);text-decoration:none;font-weight:600;border-radius:4px}
+.btn.alt{background:transparent;color:var(--haldi)}
+.btn:hover{background:#f0b838;color:var(--mati)}
+
+/* kantha stitch divider */
+.stitch{height:14px;background:
+  repeating-linear-gradient(90deg,var(--alta) 0 12px,transparent 12px 20px) 0 3px/100% 2px no-repeat,
+  repeating-linear-gradient(90deg,transparent 0 6px,var(--haldi) 6px 18px,transparent 18px 20px) 0 9px/100% 2px no-repeat;
+  background-color:var(--mati)}
+
+section{padding:5rem 0}
+.sec-head{margin-bottom:2.6rem}
+.sec-head h2{font-size:clamp(1.9rem,5vw,2.8rem)}
+.sec-head .sub{color:var(--ink-soft);margin-top:.5rem}
+
+/* belief */
+.belief{display:grid;grid-template-columns:1fr;gap:2rem}
+.belief blockquote{margin:0;font:400 clamp(1.3rem,3vw,1.75rem)/1.6 var(--serif);border-left:4px solid var(--alta);padding-left:1.4rem}
+@media(min-width:800px){.belief{grid-template-columns:1.3fr 1fr;align-items:center}}
+
+/* missions: temple-arch panels */
+.missions{background:var(--paper-2)}
+.panels{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.arch{background:var(--paper);border:2px solid var(--line);border-radius:999px 999px 6px 6px;padding:3.2rem 1.6rem 2rem;text-align:center;box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 8px var(--line)}
+.arch svg{width:64px;height:64px;margin-bottom:.8rem}
+.arch h3{font-size:1.45rem;margin-bottom:.2rem}
+.arch .bn{font:400 1.05rem var(--serif);color:var(--alta);margin-bottom:.8rem}
+.arch p{margin:0 auto;font-size:1rem;line-height:1.7}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .arch .bn{color:var(--haldi)}}
+:root[data-theme="dark"] .arch .bn{color:var(--haldi)}
+
+/* village life band */
+.village{background:var(--nil);color:#EBDDB6;position:relative;overflow:hidden}
+.village .wrap{position:relative;z-index:1}
+.village h2{color:var(--haldi);font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1rem}
+.village .three{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+.village .three div{border-top:2px dashed var(--haldi);padding-top:1rem}
+.village .three h3{font-size:1.25rem;color:var(--haldi);margin-bottom:.3rem}
+.village .three p{font-size:1rem;margin:0}
+.hut{position:absolute;right:-20px;bottom:-4px;width:min(520px,80vw);opacity:.22;pointer-events:none}
+
+/* taglines */
+.words{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.words p{font:400 1.35rem/1.6 var(--serif);border-bottom:1px dashed var(--line);padding-bottom:1rem;margin:0}
+
+/* join */
+.join{background:var(--mati);color:#EBDDB6;text-align:center}
+.join h2{color:var(--haldi);font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1rem}
+.join p{margin-inline:auto}
+.contact{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:2.2rem auto;max-width:860px;text-align:left}
+.contact div{border:1px dashed var(--haldi);padding:1rem 1.2rem}
+.contact small{display:block;color:#d9c79b;font-size:.9rem}
+.contact span{font-weight:500}
+footer{background:#1d1109;color:#cdb88a;text-align:center;padding:1.6rem 0 calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.95rem}
+@media(prefers-reduced-motion:reduce){.flame{animation:none}html{scroll-behavior:auto}}
+@media(max-width:640px){nav ul{gap:1rem;font-size:.92rem}section{padding:3.6rem 0}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav>
+    <div class="wrap">
+      <b>স্বপন সাথী</b>
+      <ul>
+        <li><a href="#missions">আমাদের কাজ</a></li>
+        <li><a href="#about">আমাদের বিশ্বাস</a></li>
+        <li><a href="#join">পাশে দাঁড়ান</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrap">
+    <svg class="alpona" viewBox="0 0 300 260" role="img" aria-label="প্রদীপ ও আলপনা">
+      <defs>
+        <ellipse id="pt" cx="150" cy="78" rx="11" ry="30" fill="none" stroke="#EBDDB6" stroke-width="2.2"/>
+        <ellipse id="pt2" cx="150" cy="96" rx="6" ry="16" fill="#EBDDB6" opacity=".85"/>
+      </defs>
+      <g transform="translate(0,-8)">
+        <circle cx="150" cy="112" r="102" fill="none" stroke="#EBDDB6" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <g id="ring"><use href="#pt"/><use href="#pt" transform="rotate(30 150 112)"/><use href="#pt" transform="rotate(60 150 112)"/><use href="#pt" transform="rotate(90 150 112)"/><use href="#pt" transform="rotate(120 150 112)"/><use href="#pt" transform="rotate(150 150 112)"/><use href="#pt" transform="rotate(180 150 112)"/><use href="#pt" transform="rotate(210 150 112)"/><use href="#pt" transform="rotate(240 150 112)"/><use href="#pt" transform="rotate(270 150 112)"/><use href="#pt" transform="rotate(300 150 112)"/><use href="#pt" transform="rotate(330 150 112)"/></g>
+        <g transform="rotate(15 150 112)"><use href="#pt2" transform="translate(0,22)"/><use href="#pt2" transform="rotate(60 150 112) translate(0,22)"/><use href="#pt2" transform="rotate(120 150 112) translate(0,22)"/><use href="#pt2" transform="rotate(180 150 112) translate(0,22)"/><use href="#pt2" transform="rotate(240 150 112) translate(0,22)"/><use href="#pt2" transform="rotate(300 150 112) translate(0,22)"/></g>
+        <!-- diya -->
+        <g class="flame"><path d="M150 82c-14 16-12 30 0 38 12-8 14-22 0-38z" fill="#E3A21A"/><path d="M150 98c-6 8-5 15 0 19 5-4 6-11 0-19z" fill="#fff3c4"/></g>
+        <path d="M118 126h64c0 20-14 32-32 32s-32-12-32-32z" fill="#B3261E" stroke="#EBDDB6" stroke-width="2"/>
+        <path d="M128 134h44" stroke="#E3A21A" stroke-width="2" stroke-dasharray="3 4"/>
+      </g>
+    </svg>
+    <h1>স্বপন সাথী ট্রাস্ট</h1>
+    <div class="en">Swapan Sathi Trust</div>
+    <p class="tag">One Dream. Three Missions. A Better Tomorrow.</p>
+    <p class="tag bn-tag">স্বপ্ন সবার, পাশে স্বপন সাথী।</p>
+    <div class="btns">
+      <a class="btn" href="#missions">আমাদের তিন লক্ষ্য</a>
+      <a class="btn alt" href="#join">পাশে দাঁড়ান</a>
+    </div>
+  </div>
+</header>
+<div class="stitch" aria-hidden="true"></div>
+
+<section id="about">
+  <div class="wrap belief">
+    <blockquote>
+      প্রতিটি জীবনই আশা, মর্যাদা আর সুযোগ পাওয়ার যোগ্য।
+      <footer style="background:none;color:var(--ink-soft);text-align:left;padding:1rem 0 0;font:400 1rem var(--sans)">স্বপন সাথী ট্রাস্টের বিশ্বাস</footer>
+    </blockquote>
+    <div>
+      <p>Swapan Sathi Trust is founded on the belief that every life deserves hope, dignity and opportunity.</p>
+      <p>We support cancer research and education, empower persons with disabilities, and preserve our rich cultural heritage, so that our society grows more compassionate, inclusive and rooted in its own soil.</p>
+    </div>
+  </div>
+</section>
+
+<section class="missions" id="missions">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>আমাদের তিনটি লক্ষ্য</h2>
+      <p class="sub">Our three missions</p>
+    </div>
+    <div class="panels">
+      <article class="arch">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--alta)"><path d="M32 6c-9 0-14 7-12 14 2 8 9 12 12 14 3-2 10-6 12-14 2-7-3-14-12-14z"/><path d="M32 34 20 58M32 34l12 24"/></svg>
+        <h3>Cancer research, awareness &amp; education</h3>
+        <div class="bn">ক্যান্সার গবেষণা, সচেতনতা ও শিক্ষা</div>
+        <p>We help people understand cancer early and back the research and education that give patients and families a better chance.</p>
+      </article>
+      <article class="arch">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--nil)"><circle cx="32" cy="14" r="7"/><path d="M8 30c8 2 16 4 24 4s16-2 24-4M32 34v12M32 46 20 60M32 46l12 14"/></svg>
+        <h3>Dignity &amp; independence for Divyangjan</h3>
+        <div class="bn">দিব্যাঙ্গজনের মর্যাদা, শিক্ষা ও স্বনির্ভরতা</div>
+        <p>We stand with persons with disabilities, supporting their education, dignity and independence in everyday village life.</p>
+      </article>
+      <article class="arch">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--pata)"><path d="M32 12c-7 8-7 20 0 30 7-10 7-22 0-30zM32 42C22 40 12 32 10 22c10 0 18 6 22 20zM32 42c10-2 20-10 22-20-10 0-18 6-22 20z"/><path d="M14 52c12 6 24 6 36 0"/></svg>
+        <h3>Reviving our culture &amp; heritage</h3>
+        <div class="bn">ঐতিহ্য, সংস্কৃতি ও মূল্যবোধের পুনরুজ্জীবন</div>
+        <p>We keep our folk traditions, crafts, songs and values alive and hand them on to the next generation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="village">
+  <svg class="hut" viewBox="0 0 520 200" fill="#EBDDB6" aria-hidden="true"><path d="M0 200V150l40-20 40 20v50zM60 200v-70l90-50 90 50v70zM260 200v-60l60-35 60 35v60zM400 200v-80l55-30 65 30v80z"/><path d="M470 90c0-20 4-40 14-60 6 18 12 38 8 60z"/></svg>
+  <div class="wrap">
+    <h2>গ্রামের মাটি থেকে, গ্রামের মানুষের জন্য</h2>
+    <p>Our work begins where the road turns to a mud path: in courtyards, under banyan trees, beside the village pond. We believe lasting change is built slowly, together, and close to home.</p>
+    <div class="three">
+      <div><h3>সবার সাথে</h3><p>Every neighbour is part of the work, from elders to children.</p></div>
+      <div><h3>সেবার মনে</h3><p>Service comes first. Every effort is made with care and humility.</p></div>
+      <div><h3>শিকড়ের টানে</h3><p>We grow forward without forgetting where we come from.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>আমাদের কথা</h2><p class="sub">Words we live by</p></div>
+    <div class="words">
+      <p>স্বপ্ন সবার, পাশে স্বপন সাথী।</p>
+      <p>মানবতার পাশে, সংস্কৃতির পথে।</p>
+      <p>স্বপ্ন দেখাই, স্বপ্ন বাঁচাই।</p>
+      <p>মানুষের সেবা, সংস্কৃতির রক্ষা, আগামীর আশা।</p>
+    </div>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"></div>
+<section class="join" id="join">
+  <div class="wrap">
+    <h2>আমাদের পাশে দাঁড়ান</h2>
+    <p>Volunteer, donate or simply spread the word. Every hand makes the dream bigger.</p>
+    <div class="contact">
+      <div><small>ফোন / Phone</small><span><a href="tel:+919153252410">+91 91532 52410</a></span></div>
+      <div><small>ইমেল / Email</small><span><a href="mailto:swapansamanta55@gmail.com">swapansamanta55@gmail.com</a></span></div>
+      <div><small>ঠিকানা / Address</small><span>গ্রাম: ভান্ডারবেড়িয়া, পোস্ট: কুলবেড়িয়া,<br>জেলা: পূর্ব মেদিনীপুর, পিন: 721649<br><small style="display:inline;font-size:.9rem">Vill: Bhanderberia, PO: Kulberia, Dist: Purba Medinipur, PIN: 721649</small></span></div>
+    </div>
+    <a class="btn" href="https://wa.me/919153252410?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A6%A8%20%E0%A6%B8%E0%A6%BE%E0%A6%A5%E0%A7%80%20%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%87%20%E0%A6%AF%E0%A7%8B%E0%A6%97%20%E0%A6%A6%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87" target="_blank" rel="noopener">হোয়াটসঅ্যাপে যোগ দিন</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">স্বপন সাথী ট্রাস্ট · A trust for humanity and heritage</div>
+</footer>
+</body>
+</html>
